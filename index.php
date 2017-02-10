@@ -15,17 +15,19 @@
 				<h3 id = "message">
 <?php
 echo "STEP 1: Set local variables";
-$servername = "mysql://us-cdbr-iron-east-04.cleardb.net/ad_722846699e6114c";
+$servername = "us-cdbr-iron-east-04.cleardb.net:3306";
 $username = "be8cdc50bb3240";
 $password = "8641e7fb";
 
 echo "<br>STEP 2: Register JDBC driver";
-$conn = new mysqli($servername, $username, $password);
+$link = new mysql_connect($servername, $username, $password);
 
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (!$link) {
+    die("Connection failed: " . mysql_error());
 }
+
+mysql_close($link);
 echo "Connected successfully";
 ?> 				
 				</h3>
