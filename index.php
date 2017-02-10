@@ -14,6 +14,7 @@
 			<td>
 				<h3 id = "message">
 <?php
+echo "Opening connection!";
 $servername = "us-cdbr-iron-east-04.cleardb.net";
 $username = "be8cdc50bb3240";
 $password = "8641e7fb";
