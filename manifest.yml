@@ -6,3 +6,5 @@ applications:
   name: MyFirstAppPHP
   host: MyFirstAppPHP
   disk_quota: 1024M
+  services:
+  - ClearDB MySQL Database-rt
