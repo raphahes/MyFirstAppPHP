@@ -66,7 +66,7 @@ $username = "be8cdc50bb3240";
 $password = "8641e7fb";
 
 echo "<br>STEP 2: Register JDBC driver";
-$link = new mysql_connect($servername, $username, $password);
+$link = mysql_connect($servername, $username, $password);
 
 echo "<br>STEP 3: Verify the connection";
 if (!$link) {
